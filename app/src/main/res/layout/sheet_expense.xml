@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="@dimen/space_3">
+
+        <TextView android:id="@+id/tvTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Add transaction"
+            android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleType" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2"
+            app:singleSelection="true" app:selectionRequired="true">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnExpense"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Expense" android:insetTop="0dp"
+                android:insetBottom="0dp" android:textSize="13sp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnIncome"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Income" android:insetTop="0dp"
+                android:insetBottom="0dp" android:textSize="13sp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnTransfer"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Transfer" android:insetTop="0dp"
+                android:insetBottom="0dp" android:textSize="13sp" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2" android:hint="Amount">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAmount" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="numberDecimal"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1" android:hint="Title (e.g. Blue Bottle Coffee)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNote" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="text" android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1" android:hint="Category">
+            <AutoCompleteTextView android:id="@+id/actCategory"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/space_1">
+            <TextView android:id="@+id/tvDate" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:textColor="@color/text_primary" android:textSize="14sp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnPickDate"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Date" android:insetTop="0dp" android:insetBottom="0dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnPickTime"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Time" android:insetTop="0dp" android:insetBottom="0dp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/space_2">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDelete"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/delete" android:textColor="@color/danger"
+                android:visibility="gone" />
+            <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSave"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/save" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

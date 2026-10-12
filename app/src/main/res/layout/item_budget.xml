@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="@dimen/card_pad"
+    android:layout_marginBottom="10dp" android:background="@drawable/bg_card">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/tvCategory" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"
+            android:maxLines="1" android:ellipsize="end" />
+        <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="13sp" android:textStyle="bold" />
+    </LinearLayout>
+
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="8dp"
+        android:layout_marginTop="10dp" android:max="100" android:progress="0" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="8dp">
+        <TextView android:id="@+id/tvSpent" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/text_secondary" android:textSize="12sp" />
+        <TextView android:id="@+id/tvLimit" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <TextView android:id="@+id/tvTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="New task"
+            android:textColor="@color/text_primary" android:textSize="19sp" android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:hint="Task">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTitle" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+            <TextView android:id="@+id/tvDue" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:textColor="@color/text_primary" android:textSize="15sp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnPickDate"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Due date" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnClearDate"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Clear" android:visibility="gone" />
+        </LinearLayout>
+
+        <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/swNotify"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="Remind me"
+            android:textColor="@color/text_primary" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="Checklist"
+            android:textColor="@color/text_secondary" android:textSize="13sp" />
+
+        <LinearLayout android:id="@+id/checklist" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" />
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAddItem"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="+ Add item" android:insetTop="0dp" android:insetBottom="0dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDelete"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/delete" android:textColor="@color/danger"
+                android:visibility="gone" />
+            <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSave"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/save" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

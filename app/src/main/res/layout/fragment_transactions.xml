@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:paddingHorizontal="@dimen/screen_pad"
+        android:paddingTop="@dimen/space_1">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:hint="@string/search" app:startIconDrawable="@drawable/ic_search"
+            app:boxCornerRadiusTopStart="@dimen/radius_pill"
+            app:boxCornerRadiusTopEnd="@dimen/radius_pill"
+            app:boxCornerRadiusBottomStart="@dimen/radius_pill"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_pill">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="text"
+                android:imeOptions="actionSearch" android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroup"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1" app:singleSelection="true"
+            app:selectionRequired="true" app:chipSpacingHorizontal="8dp">
+            <com.google.android.material.chip.Chip android:id="@+id/chipAll"
+                style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="All" android:checked="true" />
+            <com.google.android.material.chip.Chip android:id="@+id/chipExpenses"
+                style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Expenses" />
+            <com.google.android.material.chip.Chip android:id="@+id/chipIncome"
+                style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Income" />
+            <com.google.android.material.chip.Chip android:id="@+id/chipTransfers"
+                style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Transfers" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="@dimen/space_1">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:padding="12dp"
+                android:background="@drawable/bg_card">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Income" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                <TextView android:id="@+id/tvTotalIncome" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/success"
+                    android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+            <Space android:layout_width="10dp" android:layout_height="1dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:padding="12dp"
+                android:background="@drawable/bg_card">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Expense" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                <TextView android:id="@+id/tvTotalExpense" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="@color/danger"
+                    android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="No transactions yet. Tap + to add your first one."
+            android:textColor="@color/text_secondary" android:textSize="14sp"
+            android:gravity="center" android:padding="@dimen/space_4" android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+            android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:clipToPadding="false"
+            android:paddingBottom="96dp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/space_2" android:src="@drawable/ic_add"
+        android:contentDescription="@string/add" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cal-Expenses design tokens - LIGHT theme -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg">#FFF3F7F3</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface2">#FFF7FAF7</color>
+    <color name="surface3">#FFEDF2EE</color>
+
+    <color name="accent">#FF087F5B</color>
+    <color name="accent_dim">#FF075E45</color>
+    <color name="accent_cyan">#FF3B82B8</color>
+    <color name="on_accent">#FFFFFFFF</color>
+
+    <color name="text_primary">#FF17211C</color>
+    <color name="text_secondary">#FF68756D</color>
+    <color name="outline">#FFE4EBE5</color>
+
+    <color name="success">#FF16834A</color>
+    <color name="danger">#FFC45A43</color>
+    <color name="warning">#FFB7791F</color>
+</resources>

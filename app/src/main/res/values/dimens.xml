@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 8dp spacing system -->
+    <dimen name="space_1">8dp</dimen>
+    <dimen name="space_2">16dp</dimen>
+    <dimen name="space_3">24dp</dimen>
+    <dimen name="space_4">32dp</dimen>
+
+    <dimen name="screen_pad">16dp</dimen>
+    <dimen name="card_pad">16dp</dimen>
+    <dimen name="radius_card">20dp</dimen>
+    <dimen name="radius_card_lg">24dp</dimen>
+    <dimen name="radius_pill">100dp</dimen>
+    <dimen name="radius_input">14dp</dimen>
+</resources>

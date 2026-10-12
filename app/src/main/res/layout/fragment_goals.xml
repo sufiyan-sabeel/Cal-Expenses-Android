@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:paddingHorizontal="@dimen/screen_pad"
+        android:paddingTop="@dimen/space_1">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="@dimen/space_3"
+            android:background="@drawable/bg_card_lg">
+            <TextView android:id="@+id/tvTotalLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="TOTAL SAVED TOWARDS GOALS"
+                android:textColor="@color/text_secondary" android:textSize="11sp"
+                android:letterSpacing="0.08" />
+            <TextView android:id="@+id/tvTotalSaved" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/accent"
+                android:textSize="28sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+            <TextView android:id="@+id/tvTotalSub" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/text_secondary"
+                android:textSize="13sp" android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No goals yet. Tap + to create your first savings goal."
+            android:textColor="@color/text_secondary" android:textSize="14sp"
+            android:gravity="center" android:padding="@dimen/space_4" android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+            android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:clipToPadding="false"
+            android:paddingTop="@dimen/space_2" android:paddingBottom="96dp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/space_2" android:src="@drawable/ic_add"
+        android:contentDescription="@string/add" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
