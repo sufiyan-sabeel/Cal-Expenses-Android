@@ -3,6 +3,8 @@
 An offline-first Android expense tracker with voice notes and task management.
 Created by **Umaiz Sufiyan**.
 
+**Website & APK download:** https://sufiyan-sabeel.github.io/Cal-Expenses-Website/
+
 ## What it does
 
 - **Expenses** — add, edit, delete, categorise and search transactions (expense or income).
@@ -81,3 +83,7 @@ You can also open the project in Android Studio and press Run.
   would add your own release signing config.
 - Speech recognition depends on the device having a recognition service; when it is
   unavailable the app tells you and you can type instead.
+
+## Licence
+
+MIT — see [LICENSE](./LICENSE). Copyright (c) 2026 Umaiz Sufiyan.
