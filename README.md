@@ -4,6 +4,7 @@ An offline-first Android expense tracker with voice notes and task management.
 Created by **Umaiz Sufiyan**.
 
 **Website & APK download:** https://sufiyan-sabeel.github.io/Cal-Expenses-Website/
+**Web app:** https://sufiyan-sabeel.github.io/Cal-Expenses/
 
 ## What it does
 
